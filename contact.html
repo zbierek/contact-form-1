@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="Stylesheet" type="text/css" href="application.css">
   <title>Welcome to Mr. Coffee website where you can find coffeliscious content!</title>
+  <script src="form.js"></script>
 </head>
 <body>
 	<header>
@@ -29,13 +30,13 @@
       <div class="form-slogan">
         <h1>Dietes nous tout!</h1>
       </div>
-      <form action="*">
-        <label>Nazwisko*</label> <input type="text" name="Nazwisko" required /> 
-        <label>Imię* </label><input type="text" name="Imię" size="50" maxlength="30" required/> 
-        <label>Telefon </label><input type="text" name="Telefon" size="50" maxlength="30" /> 
-        <label>E-mail* </label><input type="email" name="E-mail" size="50" maxlength="30" required />
-        <label>Wiadomość* </label><input id= "message" type="text" name="Wiadomość" placeholder="Tutaj wpisz wiadomość" required/></label> 
-        <button type="submit">Wyślij formularz</button>
+      <form name="form" method="post" id="form" onsubmit="return validateForm()">
+        <label>Nazwisko*</label> <input type="text" name="Nazwisko" id="nazwisko" required /> 
+        <label>Imię* </label><input type="text" name="imie" id="imie" required/> 
+        <label>Telefon </label><input type="text" name="Telefon" id="telefon"  /> 
+        <label>E-mail* </label><input type="email" name="E-mail" id="email" required />
+        <label>Wiadomość* </label><input id= "message" type="text" name="Wiadomość" id= "wiadomosc" placeholder="Tutaj wpisz wiadomość" required/></label> 
+        <button type="submit" id="submit">Wyślij formularz</button>
         </form>
     </div>
   </section>
@@ -70,5 +71,5 @@
       <img src="assets/logo_facebook.png" class="social-media-logo">
     </div>
   </footer>
-  <script src="form.js"></script>
+  
 </body>
